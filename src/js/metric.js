@@ -35,7 +35,7 @@ buildMetric = function(metricValue, propertiesDict) {
   }
 
   // convert svg width in 12/ths to pixels.
-  windowTwelf = parseInt(window.innerWidth/12)
+  windowTwelf = parseInt(window.innerWidth/16)
   width = (windowTwelf * width) - 2
   if (height <= 12) {
     height = (windowTwelf * height)
