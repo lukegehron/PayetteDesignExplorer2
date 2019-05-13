@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="SVG.js"></script>
+  <script src="libraries/p5.min.js"></script>
+  <script src="libraries/p5.dom.js"></script>
+
+  <title>My First SVG</title>
+</head>
+
+<body>
+
+  <nav id="sidebar" style="position:absolute">
+    <div class="sidebar-header">
+      <h2>Lab Planning Tool</h2>
+    </div>
+
+    <ul class="list-unstyled components">
+      <p>NAME OF UNIVERSITY</p>
+      <div id="div1">
+
+      <li>
+      <li>
+        <a href="#pageSubmenu1" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">General Info</a>
+        <ul class="collapse list-unstyled" id="pageSubmenu1">
+          <li>
+            <!-- <a href="#"># of PI's</a> -->
+            <label id="label"># of PI's</label>
+ 						<input type="number" name="NumPI" id="NumPI" min="1" max="10" value="5" step="1">
+          </li>
+          <li>
+            <!-- <a href="#">Researcher Type</a> -->
+            <label id="label">Researcher Type</label>
+ 						<input type="text" name="ResearchType" id="ResearchType" value="Wet Lab Researcher">
+          </li>
+          <li>
+            <!-- <a href="#">Team Size 2019 (PI + ?)</a> -->
+            <label id="label">Team Size 2019</label>
+ 						<input type="number" name="TeamSize2019" id="TeamSize2019" min="1" max="10" value="4" step="1">
+          </li>
+          <li>
+            <!-- <a href="#">Team Size 2029 (PI + ?)</a> -->
+            <label id="label">Team Size 2029</label>
+ 						<input type="number" name="TeamSize2019" id="TeamSize2019" min="1" max="10" value="6" step="1">
+          </li>
+        </ul>
+      </li>
+      </li>
+    </div>
+    <div id="div2">
+      <li>
+        <a href="#pageSubmenu2" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Administrative Space</a>
+        <ul class="collapse list-unstyled" id="pageSubmenu2">
+          <li>
+            <!-- <a href="#">Page 1</a> -->
+            <label id="label">Faculty Office (SF)</label>
+ 						<input type="number" name="TeamSize2019" id="TeamSize2019" min="0" max="1000" value="120" step="1">
+            <input type="number" name="TeamSize2019" id="TeamSize2019" min="0" max="1000" value="120" step="1">
+          </li>
+          <li>
+            <a href="#">Page 2</a>
+          </li>
+          <li>
+            <a href="#">Page 3</a>
+          </li>
+        </ul>
+      </li>
+    </div>
+      <li>
+        <a href="#pageSubmenu3" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Research Space</a>
+        <ul class="collapse list-unstyled" id="pageSubmenu3">
+          <li>
+            <!-- <a href="#">Page 1</a> -->
+            <label id="label">Longitude</label>
+ 						<input type="number" name="long" id="long" min="-180" max="180" value="-72" step="1">
+          </li>
+          <li>
+            <a href="#">Page 2</a>
+          </li>
+          <li>
+            <a href="#">Page 3</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">+ Add New Dept/Reasearcher</a>
+      </li>
+      <li>
+        <a href="#">+ Upload Data (.CSV)</a>
+      </li>
+      <li>
+        <a href="#">Contact Us</a>
+      </li>
+    </ul>
+  </nav>
+
+
+  <div class="container">
+    <div class="row">
+
+
+      <div class="col-12">
+        <!-- <div id="content"> -->
+        <nav class="navbar-expand-lg navbar-light bg-light">
+          <!-- <div style="text-align:center"> -->
+
+
+          <div class="row">
+            <div class="col-1">
+              <button type="button" id="sidebarCollapse" class="btn btn-info">
+                <i class="fas fa-align-left"></i>
+                <span><</span>
+              </button>
+            </div>
+            <div class="col-2" style="text-align:center; padding:10px 10px 0px 10px">
+              TOTAL PI's: 12
+            </div>
+            <div class="col-6" style="text-align:center; padding:10px 10px 0px 10px">
+              ALL DEPT X
+            </div>
+            <div class="col-3" style="text-align:center; padding:10px 10px 0px 10px">
+              TOTAL: 12,850 sf
+            </div>
+          </div>
+
+
+
+          <!-- </div> -->
+        </nav>
+        <!-- </div> -->
+
+
+
+        <div id="accordion">
+          <div class="card">
+            <div class="card-header" id="headingOne">
+              <div class="row">
+              <div class="col-1">
+              <h5 class="mb-0">
+                <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  |||
+                </button>
+              </h5>
+            </div>
+              <div class="col-2" style="text-align:center; padding:10px 10px 0px 10px">
+                5 PI's
+              </div>
+              <div class="col-6" style="text-align:center; padding:10px 10px 0px 10px">
+                WET LAB RESEARCHER
+              </div>
+              <div class="col-3" style="text-align:center; padding:10px 10px 0px 10px">
+                850 sf
+              </div>
+            </div>
+          </div>
+
+            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-8">
+                  </div>
+                  <div class="col-4">
+                    <div class="row">
+                      <div class="col-6">
+                      </div>
+
+                      <div class="col-6" style="text-align:center">
+                        TEAM SIZE
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="col-6">
+                        <!-- blank -->
+                      </div>
+                      <div class="col-3" style="text-align:center;">
+                        2019<br>
+                        PI + 4
+                      </div>
+                      <div class="col-3" style="text-align:center;">
+                        2029<br>
+                        PI + 6
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <hr class="hr1">
+
+                <div class="row">
+                  <div class="col-8">
+                    ADMINISTRATIVE SPACE<br><br>
+                    <div class="row">
+                      <div class="col-4">
+                        Faculty Office<br><br>
+                        <object type="image/svg+xml" id="logoObject" data="/Assets/Office.svg" height="135px">Your browser does not support SVGs</object><br>
+                        Private Office
+                      </div>
+                      <div class="col-8">
+                        Informal/Meeting Space<br><br>
+                        <object type="image/svg+xml" id="logoObject" data="/Assets/SharedOffices.svg" height="135px">Your browser does not support SVGs</object><br>
+                        <div class="row">
+                          <div class="col-6">
+                            1/3 Share<br>
+                            LG Conf/Kitchen<br>
+                            Soft Seating (180 SF)
+                          </div>
+                          <div class="col-6">
+                            1/2 Share<br>
+                            SM Conf (140 SF)
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-4">
+                    <br><br><br>
+                    <div class="row">
+                      <div class="col-6">
+                        Faculty Office<br>
+                        LG Conference<br>
+                        SM Conference
+                      </div>
+                      <div class="col-3" style="text-align:right;">
+                        120 SF<br>
+                        0 SF<br>
+                        70 SF
+                      </div>
+                      <div class="col-3" style="text-align:right;">
+                        120 SF<br>
+                        60 SF<br>
+                        70 SF
+                      </div>
+                    </div>
+                    <hr class="hr1">
+                    <div class="row">
+                      <div class="col-6">
+                        <!-- blank -->
+                      </div>
+                      <div class="col-3" style="text-align:right;">
+                        190 SF
+                      </div>
+                      <div class="col-3" style="text-align:right;">
+                        250 SF
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <hr class="hr1">
+
+                <div class="row">
+                  <div class="col-8">
+                    RESEARCH SPACE<br><br>
+                    &nbsp;&nbsp; Research Staff Office Space<br><br>
+                    <div class="row">
+                      <div class="col-1">
+                      </div>
+                      <div class="col-11">
+
+                        <div class="row">
+                          <div class="col-auto" style="text-align:right">
+                            PHD, GRADS, SCIENTISTS<br><br>
+                            <object type="image/svg+xml" id="logoObject" data="/Assets/Person.svg" width="20px">Your browser does not support SVGs</object><br>
+                            GROWTH
+                          </div>
+                          <div class="col-6" style="border-left: 2px solid black;  height: 140px;">
+                            UNDERGRADS<br><br>
+                            <object type="image/svg+xml" id="logoObject" data="/Assets/Person.svg" width="20px">Your browser does not support SVGs</object><br>
+                          </div>
+                        </div><br>
+                        <object type="image/svg+xml" id="logoObject" data="/Assets/GradDesk.svg" height="100px">Your browser does not support SVGs</object>
+                        <object type="image/svg+xml" id="logoObject" data="/Assets/GradDesk.svg"  height="100px">Your browser does not support SVGs</object>
+                        <object type="image/svg+xml" id="logoObject" data="/Assets/GradDesk.svg" height="100px">Your browser does not support SVGs</object>
+                        <object type="image/svg+xml" id="logoObject" data="/Assets/UndergradDesk.svg" height="100px">Your browser does not support SVGs</object><br>
+
+                        <div class="row">
+                          <div class="col-4">
+                            STAFF WORKSTATION<br>
+                            40 SF
+                          </div>
+                          <div class="col-6">
+                            UG WORKSTATION<br>
+                            25 SF
+                          </div>
+                        </div>
+                      </div>
+                    </div><br>
+                    &nbsp;&nbsp; Wet Experimental Lab<br>
+                    <div class="row">
+                      <div class="col-1">
+                      </div>
+                      <div class="col-11">
+                        <object type="image/svg+xml" id="logoObject" data="/Assets/FloorPlan.svg" width="300px">Your browser does not support SVGs</object><br>
+                      </div>
+                    </div>
+
+                  </div>
+                  <div class="col-4">
+                    <br><br><br>
+                    <div class="row">
+                      <div class="col-6">
+                        Faculty Office<br>
+                        LG Conference<br>
+                        SM Conference
+                      </div>
+                      <div class="col-3" style="text-align:right;">
+                        120 SF<br>
+                        0 SF<br>
+                        70 SF
+                      </div>
+                      <div class="col-3" style="text-align:right;">
+                        120 SF<br>
+                        60 SF<br>
+                        70 SF
+                      </div>
+                    </div>
+                    <hr class="hr1">
+                    <div class="row">
+                      <div class="col-6">
+                        <!-- blank -->
+                      </div>
+                      <div class="col-3" style="text-align:right;">
+                        190 SF
+                      </div>
+                      <div class="col-3" style="text-align:right;">
+                        250 SF
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingTwo">
+              <h5 class="mb-0">
+                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  Collapsible Group Item #2
+                </button>
+              </h5>
+            </div>
+            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+              <div class="card-body">
+                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
+                sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings
+                occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingThree">
+              <h5 class="mb-0">
+                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                  Collapsible Group Item #3
+                </button>
+              </h5>
+            </div>
+            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+              <div class="card-body">
+                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
+                sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings
+                occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- </div> -->
+
+</body>
+
+</html>
