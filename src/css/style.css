@@ -1,0 +1,306 @@
+
+
+
+/* Styling for classes */
+.slider {
+  float:left;
+  padding:10px;
+  /* height:fit-content; */
+}
+
+/* .slideroutput {
+  float:right;
+}
+.slideroutput p {
+  margin-top:10px;
+} */
+
+.logo {
+  padding-right:30px;
+  margin:10px;
+}
+
+.btn-default {
+  border-radius:0px;
+  margin:10px;
+  float:right;
+}
+
+.btn-default:hover {
+  background-color:#D3D3D3;
+  border-color:#D3D3D3;
+}
+
+.slabel {
+  float:left;
+  clear:both;
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #A9A9A9;
+    color: black;
+}
+
+.footer a {
+    margin-left:20px;
+    margin-right:20px;
+    color: black;
+}
+
+.footer a:hover{
+    color: white;
+    text-decoration:none;
+}
+
+/* Styling for individual objects */
+#header {
+  margin-bottom:10px;
+  clear:both;
+}
+
+#study_results {
+  margin:auto;
+}
+
+/* #inputSliders {
+  font-family:sans-serif;
+  outline:none;
+  padding-top:15px;
+  margin: 0 auto;
+} */
+
+#summary {
+  font-family:sans-serif;
+  font-weight:bold;
+  text-align:center;
+  outline:none;
+  padding-top:15px;
+  margin: 0 auto;
+}
+
+#content {
+  margin: 0 auto;
+  padding-top:15px
+}
+
+#input_sliders label {
+  font-weight:bold;
+}
+
+#backstory {
+  float:right;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+body {
+	margin: 10px;
+  font-family: "raleway", sans-serif;
+}
+
+.container{
+	/* float:left; */
+}
+
+.tableLegend{
+	font-size: 12px;
+	font-weight: 400;
+	padding: 10;
+	bottom: 12px;
+	float: right;
+}
+
+.left {
+	position: relative;
+	float: left;
+	width: 550px;
+	padding: 0;
+	margin: 0 10px 0 0;
+}
+
+
+
+
+/* .slider {
+ cursor: pointer;
+ top: 0;
+ left: 0;
+ right: 0;
+ bottom: 0;
+ background-color:  #4c4c4e;
+ -webkit-transition: .4s;
+ transition: .4s;
+}
+.slider {
+ border-radius: 20px;
+}
+.slider:before {
+ border-radius: 50%;
+} */
+
+
+
+
+
+
+.slider p {
+	float: right;
+	display: inline-block;
+	font-weight: 300;
+	font-size: 12px;
+	color: #4c4c4e;
+	/* margin: 0; */
+}
+
+
+
+
+
+
+
+
+
+
+
+/* @font-face {
+	font-family: "museo-sans";
+	font-weight: 100;
+	src: url('../fonts/MuseoSans-300.ttf');
+}
+@font-face {
+	font-family: "museo-sans";
+	font-weight: 300;
+	src: url('../fonts/MuseoSans-300.ttf');
+}
+@font-face {
+	font-family: "museo-sans";
+	font-weight: 700;
+	src: url('../fonts/MuseoSans_0.ttf');
+}
+@font-face {
+	font-family: "museo-sans";
+	font-weight: 900;
+	src: url('../fonts/MuseoSans_1.ttf');
+} */
+
+
+/* Styling for the sliders*/
+input[type=range] {
+  -webkit-appearance: none;
+  /* margin: 18px 0; */
+  width: 100%;
+}
+input[type=range]:focus {
+  outline: none;
+}
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 3px;
+  padding-top: 2px
+  margin: -2px 0;
+  cursor: pointer;
+  animate: 0.2s;
+  background: #d5d5d5;
+  border-radius: 0px;
+}
+input[type=range]::-webkit-slider-runnable-progress {
+  background: #e4537f;
+}
+input[type=range]::-webkit-slider-thumb {
+  border: 3px solid #e4537f;
+  height: 12px;
+  width: 12px;
+  border-radius: 8px;
+  background: #fff;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -5px;
+}
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: #A9A9A9;
+}
+input[type=range]::-moz-range-track {
+  width: 100%;
+  height: 2px;
+  cursor: pointer;
+  animate: 0.2s;
+  /* box-shadow: 1px 1px 1px #A9A9A9, 0px 0px 1px #A9A9A9; */
+  background: #d5d5d5;
+  border-radius: 0px;
+}
+
+input[type=range]::-moz-range-progress {
+  background: #e4537f;
+}
+
+input[type=range]::-moz-range-thumb {
+  border: 3px solid #e4537f;
+  height: 5px;
+  width: 5px;
+  border-radius: 50%;
+  background: #fff;
+  cursor: pointer;
+}
+input[type=range]::-ms-track {
+  width: 100%;
+  height: 3px;
+  cursor: pointer;
+  animate: 0.2s;
+  background: transparent;
+  border-color: transparent;
+  border-width: 12px 0;
+  margin-bottom: 4px;
+  color: transparent;
+}
+input[type=range]::-ms-progress {
+  background: #e4537f;
+}
+input[type=range]::-ms-fill-lower {
+  background: #A9A9A9;
+  border: 0.2px solid #A9A9A9;
+  border-radius: 4px;
+  /* box-shadow: 1px 1px 1px #A9A9A9, 0px 0px 1px #A9A9A9; */
+}
+input[type=range]::-ms-fill-upper {
+  background: #A9A9A9;
+  border: 0.2px solid #A9A9A9;
+  border-radius: 4px;
+  /* box-shadow: 1px 1px 1px #A9A9A9, 0px 0px 1px #A9A9A9; */
+}
+input[type=range]::-ms-thumb {
+  border: 3px solid #e4537f;
+  height: 5px;
+  width: 5px;
+  border-radius: 50%;
+  background-color: #fff;
+  cursor: pointer;
+  margin-top: 0px;
+}
+input[type=range]:focus::-ms-fill-lower {
+  background: #A9A9A9;
+}
+input[type=range]:focus::-ms-fill-upper {
+  background: #A9A9A9;
+}
